@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Benjamin Moreau</title>
+    <link rel="stylesheet" href="style.css">
+
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img src="imgs/medaillon_profil.png" alt="Photo de profil" id="profile-pic"/>
+        <div id="right-header">
+            <h1>Benjamin Moreau</h1>
+            <p>Ingénieur en informatique graphique</p>
+            <p>3D, rendu, simulation</p>
+            <br/>
+            <div class="header-link">
+                <img src="imgs/logo_email.png" alt="Logo Email" />
+                <p>benjamin.moreau.2020[at]polytechnique.org</p>
+            </div>
+            <a class="header-link" href="https://linkedin.com/in/benjamin-ah-moreau">
+                <img src="imgs/logo_linkedin.png" alt="Logo LinkedIn" />
+                <p>linkedin.com/in/benjamin-ah-moreau</p>
+            </a>
+        </div>
+    </header>
+    <article>
+        <h2>Projets</h2>
+        <ul>
+            <li>
+                <img src="imgs/ice_floes.png" alt="Ice floes in MSFS24" class="illustration" />
+                <div class="project-info">
+                    <div class="top-info">
+                        <p class="date">décembre 2024 - janvier 2025</p>
+                    </div>
+                    <h3 class="title">Rendu procédural dynamique de blocs de glace</h3>
+                    <p class="description">
+                        Pour Microsoft Flight Simulator 2024 (Asobo Studio). Utilisation de cellules de Voronoï et d'un bruit de Perlin
+                        pour générer des blocs de glace le long des rivages gelés, dont la taille, l'aspect et l'écartement est déterminée
+                        par les conditions météorologiques. Implémentation de l'algorithme de Fortune pour calculer des cellules de Voronoï,
+                        après un tirage aléatoire des sites qui favorise une plus grande variété de tailles de cellule. Réalisé en C++ et en HLSL.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <img src="imgs/flight_cliff.png" alt="A water cliff in MSFS24" class="illustration" />
+                <div class="project-info">
+                    <div class="top-info">
+                        <p class="date">mars 2024 - décembre 2024</p>
+                    </div>
+                    <h3 class="title">Affichage d'un terrain sans popping</h3>
+                    <p class="description">
+                        Pour Microsoft Flight Simulator 2024 (Asobo Studio). Génération des meshes du terrain à la volée sur GPU
+                        à partir des textures d'altitude et du calcul de la courbature de la Terre. Blending entre lods
+                        en prenant en compte la vitesse de l'avion pour obtenir un équilibre entre qualité du rendu et discrétion
+                        de la transition. Interpolation anisotropique de l'altitude et tesselation pour améliorer les falaises maritimes.
+                        Réalisé en C++ et HLSL avec D3D12.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <img src="imgs/smooth_fluids_particles.png" alt="A smooth rendering of fluid particles" class="illustration" />
+                <div class="project-info">
+                    <div class="top-info">
+                        <p class="date">janvier 2024 - février 2024</p>
+                        <a href="https://github.com/benjamin-moreau/Project-IGD3A" target="_blank" title="Lien Github vers le projet" class="link">
+                            <img src="imgs/github_logo.png" alt="Github logo" class="github-logo" />
+                        </a> 
+                    </div>
+                    <h3 class="title">Rendu d'une hydrodynamique des particules lissées</h3>
+                    <p class="description">
+                        Projet de rendu de master 2. Implémentation de "Fast, High-Quality Rendering of Liquids Generated Using Large-scale 
+                        SPH Simulation" (X. Xiao, S. Zhang et X. Yang, 2018). Utilisation d'un mix entre une fonction de densité
+                        et une analyse en composantes principales (PCA). L'objectif était d'obtenir un résultat lisse pour les surfaces étendues,
+                        sans compromettre le rendu des gouttelettes individuelles. Réalisé en C++ et GLSL, avec GLFW et GLM.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <img src="imgs/predators_preys.png" alt="A terrain with animals" class="illustration" />
+                <div class="project-info">
+                    <div class="top-info">
+                        <p class="date">septembre 2023 - novembre 2023</p>
+                        <a href="https://github.com/benjamin-moreau/inf633-2023-2024" target="_blank" title="Lien Github vers le projet" class="link">
+                            <img src="imgs/github_logo.png" alt="Github logo" class="github-logo" />
+                        </a> 
+                    </div>
+                    <h3 class="title">Compétition génétique et sculpture d'un terrain</h3>
+                    <p class="description">
+                        Projet d'informatique graphique de master 2. Réalisation d'outils de sculpture de terrain (extrusion, creusement,
+                        lissage, aplanissement), implémentation de cinématique inverse et d'une IA avec une évolution génétique
+                        (compétition entre des proies et des prédateurs). Réalisé en C# sur Unity.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <img src="imgs/ruled_bunny.png" alt="A bunny mesh as ruled surfaces" class="illustration" />
+                <div class="project-info">
+                    <div class="top-info">
+                        <p class="date">mars 2023 - août 2023</p>
+                    </div>
+                    <h3 class="title">Approximation d'un maillage 3D par des surfaces réglées</h3>
+                    <p class="description">
+                        Stage de recherche au sein de l'Université de Cardiff. En utilisant des coordonnées de Plücker
+                        pour représenter des droites tangentes aux faces du maillage, j'ai défini puis optimisé une fonction
+                        de coût pour produire une approximation du maillage par un assemblage de surface réglées. 
+                        Réalisé en C++ en utilisant OpenMP et IntelMKL.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <img src="imgs/surfel_goat.png" alt="A 3D scene with global illumination" class="illustration" />
+                <div class="project-info">
+                    <div class="top-info">
+                        <p class="date">mars 2023</p>
+                    </div>
+                    <h3 class="title">Illumination globale avec des surfels</h3>
+                    <p class="description">
+                        Projet du cours de rendu de 3e année. Implémentation de “Point-based Global Illumination for Movie Production”
+                        de Per H. Christensen (Pixar, 2010). Echantillonage de surfels à partir des triangles des meshs, calcul
+                        de leur couleur avec du raytracing, puis création d'une structure d'octree pour les contenir et les agréger avec
+                        des harmoniques sphériques. Enfin, utilisation de ces surfels pour obtenir une illumination globale à un rebond.
+                        Réalisé en C++, sur CPU.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <img src="imgs/structure_motion.png" alt="A 3D point cloud representing a fountain" class="illustration" />
+                <div class="project-info">
+                    <div class="top-info">
+                        <p class="date">décembre 2022</p>
+                        <a href="https://github.com/benjamin-moreau/ProjetINF573" target="_blank" title="Lien Github vers le projet" class="link">
+                            <img src="imgs/github_logo.png" alt="Github logo" class="github-logo" />
+                        </a> 
+                    </div>
+                    <h3 class="title">Structure from motion</h3>
+                    <p class="description">
+                        Projet du cours de computer vision de 3e année. Reconstruction d'une scène 3D et des différentes positions de la caméra
+                        à partir de photographies prises selon différents points de vue et des paramètres intrasèques de la caméra.
+                        Calcul des points d'intérêt avec AKAZE, puis association entre les points de différentes photos en utilisant
+                        BFMatcher et RANSAC.
+                        Réalisé en C++, et en Python pour la visualisation.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <img src="imgs/foggy_reflections.jpg" alt="A 3D scene with fog, trees and a lake" class="illustration" />
+                <div class="project-info">
+                    <div class="top-info">
+                        <p class="date">juin 2022</p>
+                        <a href="https://github.com/benjamin-moreau/projetINF443" target="_blank" title="Lien Github vers le projet" class="link">
+                            <img src="imgs/github_logo.png" alt="Github logo" class="github-logo" />
+                        </a> 
+                    </div>
+                    <h3 class="title">Rendu 3D d'une scène procédurale</h3>
+                    <p class="description">
+                        Projet du cours d'informatique graphique de 2e année. Réalisation d'une scène 3D générée procéduralement avec l'algorithme
+                        Wave Function Collapse, comprenant un avatar controllable animé avec de la cinématique inverse, des lanternes placées selon un bruit
+                        de Perlin, des boids, des reflets calculés en temps réels sur les lacs avec effet de profondeur et de vagues, et un effet de brouillard.
+                        Codé en C++ et en GLSL, avec OpenGL.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <img src="imgs/non_verbal_game.png" alt="A multiplayer 3D video game" class="illustration" />
+                <div class="project-info">
+                    <div class="top-info">
+                        <p class="date">octobre 2021 - avril 2022</p>
+                        <a href="https://github.com/benjamin-moreau/PSC-Non-Verbal" target="_blank" title="Lien Github vers le projet" class="link">
+                            <img src="imgs/github_logo.png" alt="Github logo" class="github-logo" />
+                        </a> 
+                    </div>
+                    <h3 class="title">Communication non verbale dans les jeux vidéo</h3>
+                    <p class="description">
+                        Projet scientifique commun de 2e année (groupe de 6 étudiants). Etude de la communication non verbale
+                        (regard, expression, gestes, mouvements d'un avatar) dans le domaine du jeu. Réalisation d'un jeu de société, d'un jeu vidéo 2D
+                        en multijoueur local, puis d'un jeu vidéo 3D multijoueur utiliant la webcam avec Unity, chacun demandant des échanges d'informations
+                        entre les joueurs. Nommé pour le prix du meilleur projet.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <img src="imgs/granular_flow.png" alt="Small glass marbles on an inclined plane" class="illustration" />
+                <div class="project-info">
+                    <div class="top-info">
+                        <p class="date">septembre 2021 - décembre 2021</p>
+                    </div>
+                    <h3 class="title">Etude des écoulements granulaires sur un plan incliné</h3>
+                    <p class="description">
+                        Projet scientifique en laboratoire de mécanique. Etude d'un écoulement granulaire sur une pente constante,
+                        et du lien entre diamètre des billes, degré de la pente, vitesse de l'écoulement et hauteur de la couche
+                        résiduelle (une fois l'écoulement terminé). Application de Navier-Stokes et du théorème Pi pour en déduire
+                        la rhéologie. Etude de la formation de levées.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <img src="imgs/fluid_earth.png" alt="Simulated surface currents of the Earth" class="illustration" />
+                <div class="project-info">
+                    <div class="top-info">
+                        <p class="date">janvier 2019 - février 2020</p>
+                        <a href="https://github.com/benjamin-moreau/TIPE-StableFluids" target="_blank" title="Lien Github vers le projet" class="link">
+                            <img src="imgs/github_logo.png" alt="Github logo" class="github-logo" />
+                        </a> 
+                    </div>
+                    <h3 class="title">Simulation de fluides 2D "Stable fluids"</h3>
+                    <p class="description">
+                        Travail d'initiative personnelle encadré MPSI/MP*. Implémentation de la méthode de simulation "Stable fluids"
+                        de Jos Stam (1999), auquel j'ai ajouté une résolution de la pression par une méthode de multi-maillage, ainsi
+                        que l'application d'une force de vent et d'une force de Coriolis. Application à des tests simples en temps réel,
+                        observation d'allées de Von Karman, et application à une carte du monde pour retrouver les courants de surface.
+                        Réalisé en C++.
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </article>
+</body>
+
+</html>

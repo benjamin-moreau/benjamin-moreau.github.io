@@ -1,0 +1,207 @@
+body
+{
+    margin: 0px;
+
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+
+    background-color: #e5f1f3;
+}
+header
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+
+    padding: 50px 0px;
+
+    color: white;
+    background-color: #1a6b78;
+}
+header a
+{
+    color: white;
+    text-decoration: none;
+}
+
+#profile-pic
+{
+    height: 180px;
+    width: 180px;
+}
+#right-header
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+h1
+{
+    margin: 0px;
+
+    font-size: 45px;
+    font-weight: 300;
+}
+.header-link
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 7px;
+}
+.header-link img
+{
+    width: 20px;
+    height: auto;
+}
+#right-header p
+{
+    margin: 0px;
+    font-size: 18px;
+
+    font-weight: 200;
+}
+
+article
+{
+    padding-top: 30px;
+}
+article h2
+{
+    margin: 0px;
+    margin-left: 50px;
+    font-weight: 300;
+    font-size: 40px;
+}
+article ul
+{
+    list-style-type: none;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+    padding: 20px;
+}
+article li
+{
+    display: flex;
+    flex-direction: row;
+    flex: 1 0 658px;
+
+    overflow: hidden;
+
+    max-width: 800px;
+
+    border: solid rgb(204, 204, 204) 1px;
+    border-radius: 20px 5px 5px 20px;
+
+    background-color: #fafafa;
+}
+.illustration
+{
+    width: 200px;
+    min-width: 200px;
+    object-fit: cover;
+
+    border-radius: 20px 0px 0px 20px;
+}
+.project-info
+{
+    display: flex;
+    flex-direction: column;
+
+    margin: 8px 10px;
+}
+.top-info
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    font-style: italic;
+    font-size: 14px;
+    font-weight: 300;
+}
+.date
+{
+    margin: 0px;
+}
+.link
+{
+    display: flex;
+}
+.github-logo
+{
+    width: 18px;
+    height: 18px;
+}
+.title
+{
+    margin: 0px;
+    font-size: 21px;
+    font-weight: 500;
+}
+.description
+{
+    margin: 0px;
+    margin-top: 10px;
+    min-height: 90px;
+
+    font-size: 14px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+@media only screen and (max-width: 700px)
+{
+    header
+    {
+        flex-direction: column;
+        gap: 5px;
+        padding: 30px 0px;
+
+        text-align: center;
+    }
+    #profile-pic
+    {
+        height: 120px;
+        width: 120px;
+    }
+    #right-header
+    {
+        align-items: center;
+    }
+    h1
+    {
+        font-size: 34px;
+    }
+    .header-link
+    {
+        gap: 4px;
+    }
+    .header-link img
+    {
+        width: 15px;
+        height: auto;
+    }
+    #right-header p
+    {
+        font-size: 13px;
+    }
+
+    article li
+    {
+        flex: 1 0 350px;
+    }
+    .illustration
+    {
+        width: 100px;
+        min-width: 100px;
+    }
+}
